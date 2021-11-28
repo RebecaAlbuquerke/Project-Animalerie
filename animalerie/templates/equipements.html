@@ -1,0 +1,14 @@
+{% block equipements %}
+<h2 style="text-align:center"><a>Les équipements</a></h2>
+<div class="container-equipement">
+    {% for equipement in equipements %}
+    <div class="grid-item text-center">
+        <h3><a href="">{{ equipement.nom_equipement }}</a></h3>
+        <img src={{equipement.photo}} width="250px" height="250px">
+        <p>Disponibilité: <span>
+                <e1> {{ equipement.disponibilite }} </e1>
+            </span> </p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
