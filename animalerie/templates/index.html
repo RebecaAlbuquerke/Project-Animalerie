@@ -65,7 +65,7 @@
         <h2 style="text-align:center"><a>Les animaux</a></h2>
         {% for animal in animals %}
         <div class="grid-item text-center">
-            <h3><a href="">{{ animal.nom_animal }}</a></h3>
+            <h3><a href="animal/{{ animal.id_animal }}">{{ animal.id_animal }}</a></h3>
             <img src={{animal.photo}} width="250px" height="250px">
             <p>État: <span>
                     <e1> {{animal.etat}} </e1>
@@ -73,6 +73,7 @@
             <p>Lieu: <span>
                     <e1> {{animal.lieu}} </e1>
                 </span> </p>
+            <a href="animal/{{ animal.id_animal }}" class="btn btn-info" role="button">Details</a>
         </div>
         {% endfor %}
     </div>
